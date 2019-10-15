@@ -12,9 +12,8 @@
 		<!-- Bootstrap core CSS -->
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		
-		
 		<!-- Custom fonts for this template -->
-		<link href="css/main.css?ver=1.31" rel="stylesheet" type="text/css">
+		<link href="css/main.css?ver=1.1" rel="stylesheet" type="text/css">
 		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -44,10 +43,14 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Projects</a></li>
-						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About Me</a></li>
-						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
+						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio" data-langNum="1">Projects</a></li>
+						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about" data-langNum="2">About Me</a></li>
+						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact" data-langNum="3">Contact</a></li>
 					</ul>
+					<div class="btn-group btn-group-sm" role="group">
+						<button type="button" class="btn btn-primary" data-lang="en">Eng</button>
+						<button type="button" class="btn btn-primary" data-lang="ko">Kor</button>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -56,16 +59,16 @@
 		<header class="masthead ani-bg text-white text-center">
 			<div class="container">
 				<img class="img-fluid mb-5 d-block mx-auto" src="img/profile2.png" alt="">
-				<h1 class="mb-0">Sangyeol(Harry) Kim</h1>
+				<h1 class="mb-0" data-langNum="4">Harry Kim</h1>
 					<hr class="star-light">
-				<h2 class="font-weight-light mb-0">Software Engineer - Developer</h2>
+				<h2 class="font-weight-light mb-0" data-langNum="5">Software Engineer - Developer</h2>
 			</div>
 		</header>
 	
 		<!-- Portfolio Grid Section -->
 		<section class="portfolio" id="portfolio">
 			<div class="container">
-				<h2 class="text-center text-uppercase text-secondary mb-0">Projects</h2>
+				<h2 class="text-center text-uppercase text-secondary mb-0" data-langNum="1">Projects</h2>
 				<hr class="star-dark mb-5">
 				<div class="row">
 					<div class="col-md-6 col-lg-4" align="center">
@@ -76,7 +79,7 @@
 								</div>
 							</div> 
 							<img class="img-fluid" src="img/portfolio/p1.png" alt=""> 
-							<span class="text-center text-uppercase text-secondary mb-0"> Question Answering system </span>
+							<span class="text-center text-uppercase text-secondary mb-0" data-langNum="11"> Question Answering system </span>
 						</a>
 					</div>
 					<div class="col-md-6 col-lg-4" align="center">
@@ -87,7 +90,7 @@
 								</div>
 							</div>
 							<img class="img-fluid" src="img/portfolio/p2.png" alt="">
-							<span class="text-center text-uppercase text-secondary mb-0"> Crypto4CRFID </span>
+							<span class="text-center text-uppercase text-secondary mb-0" data-langNum="12"> Crypto4CRFID </span>
 						</a>
 					</div>
 					<div class="col-md-6 col-lg-4" align="center">
@@ -98,7 +101,7 @@
 								</div>
 							</div> 
 							<img class="img-fluid" src="img/portfolio/p3.png" alt="">
-							<span class="text-center text-uppercase text-secondary mb-0"> Global Tax Free system </span>
+							<span class="text-center text-uppercase text-secondary mb-0" data-langNum="13"> Global Tax Free system </span>
 						</a>
 					</div>
 					<div class="col-md-6 col-lg-4" align="center">
@@ -109,7 +112,7 @@
 								</div>
 							</div>
 							<img class="img-fluid" src="img/portfolio/p4.png" alt=""> 
-							<span class="text-center text-uppercase text-secondary mb-0"> Global EO system </span>
+							<span class="text-center text-uppercase text-secondary mb-0" data-langNum="14"> Global EO system </span>
 						</a>
 					</div>
 					<div class="col-md-6 col-lg-4" align="center">
@@ -120,7 +123,7 @@
 								</div>
 							</div> 
 							<img class="img-fluid" src="img/portfolio/submarine.png" alt="">
-							<span class="text-center text-uppercase text-secondary mb-0"> AutoPDS system </span>
+							<span class="text-center text-uppercase text-secondary mb-0" data-langNum="15"> AutoPDS system </span>
 						</a>
 					</div>
 					<div class="col-md-6 col-lg-4" align="center">
@@ -140,38 +143,112 @@
 		</section>
 	
 		<!-- About Section -->
-		<section class="bg-primary text-white mb-0" id="about">
+		<section class="bg-third text-white mb-0" id="about">
 			<div class="container">
-				<h2 class="text-center text-uppercase text-white">About Me</h2>
-				<hr class="star-light mb-5">
+				<h2 class="text-center text-uppercase text-white" data-langNum="2">About Me</h2>
+				<hr class="star-light-third mb-5">
 				<div class="row">
-					<div class="col-lg-12 ml-auto">
-						<p class="lead">A highly analytical and extremely dedicated
+					<div class="card col-lg-3 ml-auto">
+					  <div class="ds-top"></div>
+					  <div class="avatar-holder">
+					    <img src="https://avatars0.githubusercontent.com/u/30458654?s=460&v=4" alt="Albert Einstein">
+					  </div>
+					  <div class="name">
+					    <a href="https://codepen.io/AlbertFeynman/" target="_blank" data-langNum="25">Sangyeol Kim</a>
+					    <h6 title="Software developer" data-langNum="26">Software developer</h6>
+					</div>
+					  <!--
+					  <div class="button">
+					    <a href="#" class="btn" onmousedown="follow();">Follow <i class="fas fa-user-plus"></i></a>
+					  </div>
+					-->
+					  <div class="ds-info">
+					    <!--
+					    <div class="ds pens">
+					      <h6 title="Number of pens created by the user">Pens <i class="fas fa-edit"></i></h6>
+					      <p>29</p>
+					    </div>
+					-->
+					    <div class="ds projects">
+					      <h6 data-langNum="27">Projects <i class="fas fa-project-diagram"></i></h6>
+					      <p style="margin-top:-10px;">5</p>
+					    </div>
+					    <!--
+					    <div class="ds posts">
+					      <h6 title="Number of posts">Posts <i class="fas fa-comments"></i></h6>
+					      <p>0</p>
+					    </div>
+					-->
+					  </div>
+					  <div class="ds-skill">
+					    <h6 data-langNum="28">Skill <i class="fa fa-code" aria-hidden="true"></i></h6>
+					    <div class="skill html">
+					      <h6><i class="fab fa-java"></i> Java </h6>
+					      <div class="bar bar-java">
+					        <p>90%</p>
+					      </div>
+					    </div>
+					    <div class="skill css">
+					      <h6><i class="fab fa-cuttlefish"></i> C, C++ </h6>
+					      <div class="bar bar-c">
+					        <p>75%</p>
+					      </div>
+					    </div>
+					    <div class="skill javascript">
+					      <h6><i class="fab fa-python"></i> Python </h6>
+					      <div class="bar bar-py">
+					        <p>70%</p>
+					      </div>
+					    </div>
+					    <div class="skill java">
+					      <h6><i class="fab fa-html5"></i> HTML5 </h6>
+					      <div class="bar bar-html">
+					        <p>60%</p>
+					      </div>
+					    </div>	
+					    <div class="skill c">
+					      <h6><i class="fab fa-js"></i> JavaScript </h6>
+					      <div class="bar bar-js">
+					        <p>55%</p>
+					      </div>
+					    </div>	
+					    <div class="skill c++">
+					      <h6><i class="fab fa-css3-alt"></i> CSS </h6>
+					      <div class="bar bar-css">
+					        <p>55%</p>
+					      </div>
+					    </div>	
+					    
+					  </div>
+					</div>
+					
+					<div class="col-lg-9 ml-auto about-style">
+						<p data-langNum="21">A highly analytical and extremely dedicated
 							Software Engineer with a background in Software and Application
 							Development gained from intensive study and over ten years’
 							employment history in the Programming sector. Equipped with strong
 							problem-solving skills; adept at evaluating the viable options and
 							transforming ideas into practical realities.</p>
-						<p class="lead">Key to success includes excellent
+						<p data-langNum="22">Key to success includes excellent
 							organisational and time management skills as well as outstanding
 							communication skills, with a genuine commitment to delivering the
 							highest standard of service. I am highly motivated and I thrive on
 							being an integral part of planning and direction to improve
 							processes, drive growth, achieve targets, and ensure continued
 							success.</p>
-						<p class="lead">I am a strong hands-on team player with the
+						<p data-langNum="23">I am a strong hands-on team player with the
 							skills to follow instructions, show initiative, and the ability to
 							operate individually. With my ability to multitask, flexibility,
 							and adaptability, I am able to work effectively in a fast-paced
 							environment and under pressure. Throughout my career, I have been
 							a productive member of the team, capable of encouraging teamwork
 							and motivation.</p>
-					</div>
-					<div class="img-about col-lg-3">
-						<a href="https://www.goldenkey.org/" target="top">
-							<img class="img" src="img/portfolio/goldenkey.png" alt="">
-						</a>
-						<div class="caption"> Golden key member </div>
+						<div class="img-about col-lg-3">
+							<a href="https://www.goldenkey.org/" target="top">
+								<img class="img" src="img/portfolio/goldenkey.png" alt="">
+							</a>
+							<div class="caption" data-langNum="24"> Golden key member </div>
+						</div>
 					</div>
 	<!--					
 					<div class="img-about col-lg-3">
@@ -193,10 +270,63 @@
 			</div>
 		</section>
 	
+<!-- 	
+		<!-- History Section 
+		<section id="history" class="bg-secondary">
+			<h2 class="text-center text-uppercase text-white" data-langNum="">History</h2>		
+			<hr class="star-light mb-5 bg-secondary">
+			<div class="container">
+				<div class="timeline-block timeline-block-right">
+				      <div class="marker"></div>
+				      <div class="timeline-content">
+				         <h3>First Year</h3>
+				         <span>Some work experience</span>
+				         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+				      </div>
+				   </div>
+				
+				   <div class="timeline-block timeline-block-left">
+				      <div class="marker"></div>
+				      <div class="timeline-content">
+				         <h3>Seconed Year</h3>
+				         <span>Some work experience</span>
+				         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+				      </div>
+				   </div>
+				
+				   <div class="timeline-block timeline-block-right">
+				      <div class="marker"></div>
+				      <div class="timeline-content">
+				         <h3>Third Year</h3>
+				         <span>Some work experience</span>
+				         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+				      </div>
+				   </div>
+				
+				   <div class="timeline-block timeline-block-left">
+				      <div class="marker"></div>
+				      <div class="timeline-content">
+				         <h3>Fourth Year</h3>
+				         <span>Some work experience</span>
+				         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+				      </div>
+				   </div>
+				
+				   <div class="timeline-block timeline-block-right">
+				      <div class="marker"></div>
+				      <div class="timeline-content">
+				         <h3>Fifth Year</h3>
+				         <span>Some work experience</span>
+				         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+				      </div>
+				   </div>			
+			</div>
+		</section>			
+-->
 		<!-- Contact Section -->
 		<section id="contact">
 			<div class="container">
-				<h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+				<h2 class="text-center text-uppercase text-secondary mb-0" data-langNum="3">Contact</h2>
 				<hr class="star-dark mb-5">
 				<div class="row">
 					<div class="col-lg-8 mx-auto">
@@ -261,7 +391,7 @@
 	-->
 					</div>
 					<div class="col-md-4 mb-5 mb-lg-0">
-						<h4 class="text-uppercase mb-4">Around the Web</h4>
+						<h4 class="text-uppercase mb-4" data-langNum="6">Around the Web</h4>
 						<ul class="list-inline mb-0">
 							<li class="list-inline-item">
 								<a class="btn btn-outline-light btn-social text-center rounded-circle"
@@ -308,7 +438,7 @@
 	
 		<div class="copyright py-4 text-center text-white">
 			<div class="container">
-				<small>Copyright &copy; Sangyeol Kim Website 2019 </small>
+				<small data-langNum="7">Copyright &copy; Sangyeol Kim Website 2019 </small>
 			</div>
 		</div>
 	
@@ -352,18 +482,35 @@
 	
 		<!-- Custom scripts for this template -->
 		<script src="js/freelancer.min.js?ver=1.0"></script>
+		
+		<!-- 다국어 지원  -->
+		<script type="text/javascript" src="js/multiLanguage.js?ver=1.1"></script>		
 	
 		<script>
 		<!-- Modal links -->
 			$(function() {
-				$("#includedPortfolio1").load("pages/portfolio1.html?ver=1.1");
-				$("#includedPortfolio2").load("pages/portfolio2.html?ver=1.0");
-				$("#includedPortfolio3").load("pages/portfolio3.html?ver=1.0");
-				$("#includedPortfolio4").load("pages/portfolio4.html?ver=1.0");
-				$("#includedPortfolio5").load("pages/portfolio5.html?ver=1.0");
-				$("#includedPortfolio6").load("pages/portfolio6.html");
+				// GET lang
+				//if (localStorage.getItem('lang') === null)
+				var current_lang = getLanguage().substring(0, 2);
+					
+				setLanguage(current_lang);
+				modalLoad();
+				$('button').click(function() {
+					var lang = $(this).data('lang');
+					setLanguage(lang);
+				});						
+				
 			});
 	
+			function modalLoad(){
+				$("#includedPortfolio1").load("pages/portfolio1.html?ver=1.1");
+				$("#includedPortfolio2").load("pages/portfolio2.html?ver=1.1");
+				$("#includedPortfolio3").load("pages/portfolio3.html?ver=1.1");
+				$("#includedPortfolio4").load("pages/portfolio4.html?ver=1.1");
+				$("#includedPortfolio5").load("pages/portfolio5.html?ver=1.1");
+				$("#includedPortfolio6").load("pages/portfolio6.html");
+			}
+			
 		<!-- Modal image slider -->
 			var slideIndex = 1;
 			showDivs(slideIndex);
@@ -386,11 +533,22 @@
 				}
 				x[slideIndex - 1].style.display = 'block';
 			}
-		</script>
-
-		<script>
-		<!-- 한글화 작업 version up test 4567844-->
-		
+			
+			function setLanguage(currentLanguage){
+				
+				$('[data-langNum]').each(function() {
+					var $this = $(this);
+					$this.html($.lang[currentLanguage][$this.data('langnum')]);
+				});
+				
+				// SET
+				localStorage.setItem('lang', currentLanguage);
+			}
+			
+			function getLanguage(){
+				return navigator.language || navigator.userLanguage;
+			}
+			
 		</script>
 
 		<!-- 리포트2.0 로그분석코드 시작 -->

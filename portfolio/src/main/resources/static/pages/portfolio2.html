@@ -1,35 +1,39 @@
-
 <head>
 <meta charset="utf-8">
+	<!-- 다국어 지원 js -->
+	<script>
+		var current_lang = getLanguage().substring(0, 2);
+		setLanguage(current_lang);
+	</script>
 </head>
 <!-- Portfolio Modal 2 -->
 <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
 	<div class="portfolio-modal-dialog bg-table">
+		<div class="container text-center">
 		<a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#"> 
 			<i class="fa fa-3x fa-times"></i>
 		</a>
-		<div class="container text-center">
 			<div class="row">
-				<div class="col-lg-10 mx-auto">
-					<h2 class="text-secondary text-uppercase mb-0">Crypto4CRFID</h2>
+				<div class="col-lg-12 text-center">
+					<h2 class="text-secondary text-uppercase mb-0" data-langNum="12">Crypto4CRFID</h2>
 					<hr class="star-dark-modal mb-5">
 	<!-- Description Table -->					
 					<table>
 						<tbody>
 							<tr>
-								<th> Introduction </th>
-									<td class="table-normal">
+								<th data-langNum="81"> Introduction </th>
+									<td class="table-normal" data-langNum="121">
 										This project aimed to build a secure environment between an RFID reader and CRFID with Hash function.
 										<br><br>
-										Crypto4CRFID 프로젝트는 새로운 RFID 중 하나인 Computational RFID (CRFID) 과 Hash function을 이용한 Secure RFID 통신 환경을 만들어내는 프로젝트입니다. 본 프로젝트는 총 4명의 학생으로 구성되었고 그 중에서 CRFID 와 RFID Reader 간의 데이터 송/수신, Hash function 암호와 복호화를 담당하는 응용프로그램을 만드는데 기여하였습니다. 해당 응용 프로그램은 Python과 Low-level reader protocol (LLRP) 그리고 웹 서버를 이용하여 RFID data를 읽기/쓰기 가 가능하였고 User는 간단한 Bootstrap GUI를 통해서 RFID data 읽기/쓰기를 제어할 수 있도록 구축되었습니다. CRFID는 자체적으로 FRAM을 가지고 있어 기존의 RFID Memory bank 보다 훨씬 많은 양의 데이터를 저장하도록 되어있습니다. 이 프로젝트에서 해당 응용프로그램은 FRAM에 직접으로 접근하여 데이터를 읽기 또는 쓰기가 가능하도록 되어있습니다. 최종적으로 응용프로그램은 User에게 GUI를 제공함으로써 CRFID의 데이터를 쉽게 읽기 및 쓰기가 가능하지만 고유의 CRFID의 Hash function 값과 응용프로그램에서 CRFID firmware byte code를 Hash function 값으로 생성한 값과 일치하면 데이터의 접근 및 호출이 가능하도록 하였습니다.
+										
 									</td>
 							</tr>
 							<tr>
-								<th> Technique </th>
+								<th data-langNum="82"> Technique </th>
 					      			<td class="table-javascript">Python, C++, LLRP, WISP5, CRFID.</td>
 					    	</tr>
 							<tr>
-								<th> Link </th>
+								<th data-langNum="83"> Link </th>
 						      		<td class="table-html">
 						      		<a href="https://youtu.be/bqKFzGlqx2Y" target="top" style="max-width:100%">
 						      				Demonstration
@@ -37,30 +41,33 @@
 						      		</td>
 					    	</tr>
 					    	<tr>
-					      		<th> Period </th>
+					      		<th data-langNum="84"> Period </th>
 					      			<td class="table-css">2017-07 to 2017-10</td>
+					    	</tr>
+					    	<tr>
+					    		<td colspan="2">
+					<!-- Image slider -->					
+									<div class="w3-content w3-display-container mx-auto">
+										<a target="_blank" href="img/portfolio/pf2/1.png"><img class="imgs imgs-first mySlides2" src="img/portfolio/pf2/1.png"></a> 
+										<a target="_blank" href="img/portfolio/pf2/2.png"><img class="imgs mySlides2" src="img/portfolio/pf2/2.png"></a> 
+										<a target="_blank" href="img/portfolio/pf2/3.png"><img class="imgs mySlides2" src="img/portfolio/pf2/3.png"></a> 
+										<a target="_blank" href="img/portfolio/pf2/4.png"><img class="imgs mySlides2" src="img/portfolio/pf2/4.png"></a> 
+										<a target="_blank" href="img/portfolio/pf2/5.png"><img class="imgs mySlides2" src="img/portfolio/pf2/5.png"></a> 
+										<a target="_blank" href="img/portfolio/pf2/6.png"><img class="imgs mySlides2" src="img/portfolio/pf2/6.png"></a> 
+										<a target="_blank" href="img/portfolio/pf2/7.png"><img class="imgs mySlides2" src="img/portfolio/pf2/7.png"></a>
+				
+										<button class="btn btn-primary w3-display-left"
+											onclick="plusDivs(-1, 2)" style="margin-left: -4%;">&#10094;</button>
+										<button class="btn btn-success w3-display-right"
+											onclick="plusDivs(1, 2)" style="margin-right: -4%;">&#10095;</button>
+									</div>					    		
+					    		</td>
 					    	</tr>
 						</tbody>
 					</table>
-	
-	<!-- Image slider -->					
-					<div class="w3-content w3-display-container">
-						<img class="imgs imgs-first mySlides2" src="img/portfolio/pf2/1.png"> 
-						<img class="imgs mySlides2" src="img/portfolio/pf2/2.png"> 
-						<img class="imgs mySlides2" src="img/portfolio/pf2/3.png"> 
-						<img class="imgs mySlides2" src="img/portfolio/pf2/4.png"> 
-						<img class="imgs mySlides2" src="img/portfolio/pf2/5.png"> 
-						<img class="imgs mySlides2" src="img/portfolio/pf2/6.png"> 
-						<img class="imgs mySlides2" src="img/portfolio/pf2/7.png">
 
-						<button class="btn btn-primary w3-display-left"
-							onclick="plusDivs(-1, 2)" style="margin-left: -4%;">&#10094;</button>
-						<button class="btn btn-success w3-display-right"
-							onclick="plusDivs(1, 2)" style="margin-right: -4%;">&#10095;</button>
-					</div>
 					<a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#" style="margin-top: 20px;"> 
-						<i class="fa fa-close"></i>
-						Close Project
+						<i class="fa fa-close" data-langNum="9">X</i>
 					</a>
 				</div>
 			</div>

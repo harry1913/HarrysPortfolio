@@ -1,5 +1,20 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
+.about-style {
+	margin: 10px auto;
+	left:0;
+	font-family: var(--body-font);
+	font-size: 110%;
+	font-weight: 600;
+	line-height: 2.0;
+	/* text-shadow: 1px 1px rgba(0,0,0,.4); */
+}
+.nav-font-type {
+	font-family: var(--nav-font);
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
 .img-about {
 	margin-top: 20px;
 	caption-side: bottom;
@@ -7,7 +22,7 @@
 }
 
 .img-about img {
-	width: 50%;
+	width: 120px;
 	height: auto;
 	box-shadow: 1px 3px 1px rgba(66,66,66,.6); 
 	border-radius: 10px;
@@ -16,7 +31,7 @@
 
 .img-about .caption {
 	font-size: 100%;
-	font-family: 'Nanum Gothic', 'Montserrat',sans-serif;
+	/* font-family: 'Nanum Gothic', 'Montserrat',sans-serif; */
 	text-shadow: 1px 1px rgba(0,0,0,.6);  
 
 }
@@ -29,6 +44,7 @@
   animation: bg 2s linear infinite;
   overflow: hodden;
 }
+
 .ship {
   position: absolute;
   top: 0;
@@ -48,6 +64,7 @@
   background-color: #e3e3e3;
   box-shadow: inset 0 -5px 5px rgba(22, 48, 64, 0.5);
   z-index: 1000;
+  font-family: var(--table-font);
 }
 
 .vawes {
@@ -119,16 +136,16 @@
 }
 
 table {
-  font-family: 'Nanum Gothic', 'Montserrat',sans-serif;
+  /* font-family: 'Nanum Gothic', 'Montserrat',sans-serif; */
+  font-family: var(--table-font);
   border: 0px solid #ccc;
   /* border-collapse: collapse; */
   margin-bottom: 5px;
   padding: 0;
-  width: 100%;
+  /* width: 100%; */
   table-layout: fixed;
   border-collapse: separate;
   border-spacing: 0px 3px;
-  
 }
 
 table caption {
@@ -146,11 +163,12 @@ table td {
   text-align: left;
   border: 1px solid #ddd;
   background-color: white;
+  font-size: 0.9rem;
 }
 
 table th {
   background-color: #f8f8f8;	
-  font-size: 13px;
+  font-size: 1rem;
   text-transform: uppercase;
   padding: .800em;
   width: 18%;
@@ -158,13 +176,31 @@ table th {
   border-right: none;
 }
 
+.modal-paragraph-head {
+	font-size : 1.1 rem;
+	font-weight: 500;
+	color: crimson;
+}
+
 @media screen and (max-width: 600px) {
+  .portfolio-modal .portfolio-modal-dialog .container{
+	padding: 0;
+  }
+  
   table {
-    border: 0;
+	border: 0;
+	/* font-family: 'Nanum Gothic', 'Montserrat',sans-serif; */
+	left: 0;
+	font-family: var(--table-font);
+	width: 100%;
+	/* border-collapse: collapse; */
+	/* margin-bottom: 5px; */
+	padding: 0;
   }
 
   table caption {
     font-size: 1.3em;
+    margin: 0 0 0;
   }
   
   table thead {
@@ -179,7 +215,7 @@ table th {
   }
   
   table tr {
-  	font-family: 'Nanum Gothic', 'Montserrat',sans-serif;
+  	/* font-family: 'Nanum Gothic', 'Montserrat',sans-serif; */
     border-bottom: 3px solid #ddd;
     display: block;
     margin-bottom: .625em;
@@ -187,16 +223,14 @@ table th {
   }
   
   table th {
-  	font-family: 'Nanum Gothic', 'Montserrat',sans-serif;
+  	/* font-family: 'Nanum Gothic', 'Montserrat',sans-serif; */
   	border-right: 1px solid #ddd;
   }
   
-  
   table td {
-  	font-family: 'Nanum Gothic', 'Montserrat',sans-serif;
+  	/* font-family: 'Nanum Gothic', 'Montserrat',sans-serif; */
   	border : none;
  	display: block;
-    font-size: .8em;
     text-align: left;
     margin-left: 2px;
     /* word-break: break-all; */
@@ -255,8 +289,8 @@ pre.code {
 }
 
 pre.code label {
-	font-family: 'BM HANNA', '배달의민족 한나',sans-serif;
-	font-family: 'Montserrat';
+/* 	font-family: 'BM HANNA', '배달의민족 한나',sans-serif;
+	font-family: 'Montserrat'; */
     font-weight: normal;
     font-size: 13px;
     color: #444;
@@ -285,13 +319,453 @@ pre.code code {
     color: #444;
 }
 
+/* timeline */
 
-@font-face {
-	font-family: 'BM HANNA';
-	font-weight: normal;
-	font-style: normal;
-	src: url('font/BMHANNA_11yrs_ttf.eot');
-	src: url('font/BMHANNA_11yrs_ttf.eot?#iefix') format('embedded-opentype'),
-	        url('font/BMHANNA_11yrs_ttf.woff') format('woff'),
-	        url('font/BMHANNA_11yrs_ttf.ttf') format('truetype');
+
+#history .container {
+   width: 80%;
+   padding: 50px 0;
+   margin: 50px auto;
+   position: relative;
+   overflow: hidden;
+}
+
+#history .container:before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 50%;
+   margin-left: -1px;
+   width: 2px;
+   height: 100%;
+   background: #CCD1D9;
+   z-index: 1
+}
+
+
+.timeline-block {
+   width: -webkit-calc(50% + 8px);
+   width: -moz-calc(50% + 8px);
+   width: calc(50% + 8px);
+/*    display: -webkit-box;
+   display: -webkit-flex;
+   display: -moz-box;
+   display: flex;
+   -webkit-box-pack: justify;
+   -webkit-justify-content: space-between;
+   -moz-box-pack: justify;
+   justify-content: space-between;
+   clear: both; */
+}
+
+.timeline-block-right {
+   float: right;
+}
+
+.timeline-block-left {
+   float: left;
+   direction: rtl
+}
+
+.marker {
+   width: 16px;
+   height: 16px;
+   border-radius: 50%;
+   border: 2px solid #F5F7FA;
+   background: #4FC1E9;
+   margin-top: 10px;
+   z-index: 9999
+}
+
+.timeline-content {
+   width: 95%;
+   padding: 0 15px;
+   color: #666
+}
+
+.timeline-content h3 {
+   margin-top: 5px;
+   margin-bottom: 5px;
+   font-size: 25px;
+   font-weight: 500
+}
+
+.timeline-content span {
+   font-size: 15px;
+   color: #a4a4a4;
+}
+
+.timeline-content p {
+   font-size: 14px;
+   line-height: 1.5em;
+   word-spacing: 1px;
+   color: #888;
+}
+
+@media screen and (max-width: 768px) {
+   /*
+   .container:before {
+      left: 8px;
+      width: 2px;
+   }
+   */
+   .timeline-block {
+      width: 100%;
+      margin-bottom: 30px;
+   }
+   .timeline-block-right {
+      float: none;
+   }
+
+   .timeline-block-left {
+      float: none;
+      direction: ltr;
+   }
+}
+
+
+/* Profile card */
+
+/* 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #202020;
+  font-family: "Krub", sans-serif;
+}
+ */
+.card {
+  position: realtive;
+  margin: 0px auto 20px;
+/*
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+*/
+  width: 250px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
+  /* background: #151515; */
+  background: #272727;
+  overflow: hidden;
+  /* font-family: var(--card-font); */
+}
+.card .ds-top {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 120%;
+  height: 80px;
+  background: var(--card-color);
+  animation: dsTop 1.5s;
+}
+.card .avatar-holder {
+  position: absolute;
+  margin: auto;
+  top: 40px;
+  right: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #151515, inset 0 0 0 2px #000000, inset 0 0 0 2px #000000, inset 0 0 0 2px #000000, inset 0 0 0 2px #000000;
+  background: white;
+  overflow: hidden;
+  animation: mvTop 1.5s;
+  /* font-family: var(--card-font); */
+}
+.card .avatar-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .name {
+  position: absolute;
+  margin: 150px auto;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: inherit;
+  height: 40px;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+  /* font-family: var(--card-font); */
+}
+.card .name a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+}
+.card .name a:hover {
+  text-decoration: underline;
+  color: var(--card-color);
+}
+.card .name h6 {
+  position: relative;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  color: white;
+  width: auto;
+ /*  font-family: var(--card-font); */
+  
+}
+.card .button {
+  position: absolute;
+  margin: auto;
+  padding: 8px;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: inherit;
+  height: 40px;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+  outline: none;
+}
+
+.card .button a {
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: white;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  font-size: 10px;
+  transition: all 1s;
+}
+.card .button a:hover {
+  color: white;
+  background: var(--card-color);
+  
+}
+.card .ds-info {
+  position: absolute;
+  margin: 200px auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: inherit;
+  height: 40px;
+  display: flex;
+  /* font-family: var(--card-font); */
+}
+.card .ds-info .pens, .card .ds-info .projects, .card .ds-info .posts {
+  position: relative;
+  left: -300px;
+  /* width: calc(100 / 1); */
+  width: inherit;
+  /* margin-left: 5px; */
+  text-align: center;
+  color: white;
+  animation: fadeInMove 2s;
+  animation-fill-mode: forwards; 
+}
+.card .ds-info .pens h6, .card .ds-info .projects h6, .card .ds-info .posts h6 {
+  text-transform: uppercase;
+  color: var(--card-color);
+}
+.card .ds-info .pens p, .card .ds-info .projects p, .card .ds-info .posts p {
+  font-size: 12px;
+}
+.card .ds-info .ds:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+.card .ds-info .ds:nth-of-type(1) {
+  animation-delay: 1s;
+}
+.card .ds-skill {
+  position: absolute;
+  margin: auto;
+  bottom: 130px;
+  right: 0;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  animation: mvBottom 1.5s;
+  /* font-family: var(--card-font); */
+}
+.card .ds-skill h6 {
+  margin-bottom: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--card-color);
+  /* font-family: var(--card-font); */
+}
+.card .ds-skill .skill h6 {
+  font-weight: 400;
+  font-size: 8px;
+  letter-spacing: 0.05em;
+  margin: 4px 0;
+  color: white;
+}
+.card .ds-skill .skill .fab {
+  color: var(--card-color);
+  font-size: 14px;
+}
+.card .ds-skill .skill .bar {
+  height: 5px;
+  background: var(--card-color);
+  text-align: right;
+}
+.card .ds-skill .skill .bar p {
+  color: white;
+  font-size: 8px;
+  padding-top: 5px;
+  animation: fadeIn 5s;
+}
+.card .ds-skill .skill .bar:hover {
+  background: white;
+}
+
+.card .ds-skill .skill .bar-java {
+  width: 90%;
+  animation: javaSkill 1s;
+  animation-delay: 0.4s;
+}
+
+.card .ds-skill .skill .bar-c {
+  width: 75%;
+  animation: cSkill 2s;
+  animation-delay: 0.4s;
+}
+
+.card .ds-skill .skill .bar-py {
+  width: 70%;
+  animation: pySkill 3s;
+  animation-delay: 0.4s;
+}
+
+.card .ds-skill .skill .bar-html {
+  width: 60%;
+  animation: htmlSkill 4s;
+  animation-delay: 0.4s;
+}
+.card .ds-skill .skill .bar-css {
+  width: 55%;
+  animation: cssSkill 5s;
+  animation-delay: 0.4s;
+}
+.card .ds-skill .skill .bar-js {
+  width: 55%;
+  animation: jsSkill 5s;
+  animation-delay: 0.4s;
+}
+
+
+
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    left: -300px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes javaSkill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes cSkill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes pySkill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes htmlSkill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@keyframes cssSkill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 55%;
+  }
+}
+@keyframes jsSkill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 55%;
+  }
+}
+@keyframes mvBottom {
+  0% {
+    bottom: -150px;
+  }
+  100% {
+    bottom: 130px;
+  }
+}
+@keyframes mvTop {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 40px;
+  }
+}
+@keyframes dsTop {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.following {
+  color: white;
+  background: var(--card-color);
 }
